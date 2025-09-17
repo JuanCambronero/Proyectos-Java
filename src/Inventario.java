@@ -18,7 +18,6 @@ public class Inventario {
             }else{
                 inventarioProductos.put(producto.getCodProducto(), producto);
                 System.out.println(producto.getCodProducto()+" se agregado correctamente");
-
             }
     }
     //Eliminar producto
@@ -49,8 +48,7 @@ public class Inventario {
     //Mostrar inventario
     public String mostrarInventario() {
         if(inventarioProductos.size() > 0) {
-
-                StringBuilder sb = new StringBuilder();
+                StringBuilder sb = new StringBuilder();//Nueva clase que sirve para almacenar texto para imprimir
                 for (Productos i : inventarioProductos.values()) {
                     sb.append(i.getNombreProducto())
                             .append(" | ").append(i.getCategoriaProducto())

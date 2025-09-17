@@ -6,7 +6,7 @@ public class main {
         Scanner sc = new Scanner(System.in);
 
         // Inicializamos el inventario
-        Inventario inventario = new Inventario("MiTienda", new HashMap<>());
+        Inventario inventario = new Inventario("PC-Component's", new HashMap<>());
 
         boolean repetir = true;
 
