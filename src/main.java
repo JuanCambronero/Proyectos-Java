@@ -16,7 +16,8 @@ public class main {
             System.out.println("2. Modificar Producto");
             System.out.println("3. Eliminar Producto");
             System.out.println("4. Buscar Producto");
-            System.out.println("5. Salir");
+            System.out.println("5. Mostar Inventario");
+            System.out.println("0. Salir");
             System.out.print("Ingrese opción: ");
 
             int opcion = sc.nextInt();
@@ -86,6 +87,11 @@ public class main {
                     break;
 
                 case 5:
+                    System.out.println("--- Mostar Inventario ---");
+                    System.out.println(inventario.mostrarInventario());
+                    break;
+
+                case 0:
                     repetir = false;
                     System.out.println("Saliendo del programa...");
                     break;

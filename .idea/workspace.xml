@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1798985f-20d0-4c45-abec-8ece9fc5c5ea" name="Changes" comment="metodos basicos de la clase inventario">
-      <change afterPath="$PROJECT_DIR$/src/main.java" afterDir="false" />
+    <list default="true" id="1798985f-20d0-4c45-abec-8ece9fc5c5ea" name="Changes" comment="Metdos para añadir, eliminar, actualizar y buscar funcionales en la clase Main">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Categoria.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Categoria.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Inventario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inventario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Productos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Productos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +106,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1758115409911</updated>
-      <workItem from="1758115410685" duration="10575000" />
+      <workItem from="1758115410685" duration="11610000" />
     </task>
     <task id="LOCAL-00001" summary="New proyect">
       <option name="closed" value="true" />
@@ -155,7 +156,15 @@
       <option name="project" value="LOCAL" />
       <updated>1758121838834</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Metdos para añadir, eliminar, actualizar y buscar funcionales en la clase Main">
+      <option name="closed" value="true" />
+      <created>1758129737590</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1758129737590</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -167,6 +176,7 @@
     <MESSAGE value="Clases primitivas de la clase Inventario" />
     <MESSAGE value="Clases primitivas de la clase inventario" />
     <MESSAGE value="metodos basicos de la clase inventario" />
-    <option name="LAST_COMMIT_MESSAGE" value="metodos basicos de la clase inventario" />
+    <MESSAGE value="Metdos para añadir, eliminar, actualizar y buscar funcionales en la clase Main" />
+    <option name="LAST_COMMIT_MESSAGE" value="Metdos para añadir, eliminar, actualizar y buscar funcionales en la clase Main" />
   </component>
 </project>

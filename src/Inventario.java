@@ -44,5 +44,25 @@ public class Inventario {
        }
     }
 
+    //Metodos avanzados
+
+    //Mostrar inventario
+    public String mostrarInventario() {
+        if(inventarioProductos.size() > 0) {
+
+                StringBuilder sb = new StringBuilder();
+                for (Productos i : inventarioProductos.values()) {
+                    sb.append(i.getNombreProducto())
+                            .append(" | ").append(i.getCategoriaProducto())
+                            .append(" | ").append(i.getPrecioProducto())
+                            .append(" | ").append(i.getStockProducto())
+                            .append("\n");
+            }
+                return sb.toString();
+        }else {
+            System.out.println("No hay inventario");
+        }
+        return null;
+    }
 
 }

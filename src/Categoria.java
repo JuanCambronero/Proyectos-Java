@@ -1,3 +1,3 @@
 public enum Categoria {
-     ORDENADORES,MOVILES,TABLETS
+     PC,MOVIL,TABLET
 }
