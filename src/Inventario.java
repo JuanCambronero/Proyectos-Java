@@ -9,9 +9,10 @@ public class Inventario {
 
     public Inventario() {
     }
-//Metodos
 
-    //Agregar producto
+    //Metodos Basicos
+
+    //Agregar producto - 0(1)
     public void agregarProducto(Productos producto) {
             if(inventarioProductos.containsKey(producto.getCodProducto())) {
                 System.out.println(producto.getCodProducto()+" ya existe este producto");
@@ -20,7 +21,7 @@ public class Inventario {
                 System.out.println(producto.getCodProducto()+" se agregado correctamente");
             }
     }
-    //Eliminar producto
+    //Eliminar producto - 0(1)
     public void eliminarProducto(Productos producto) {
         if(inventarioProductos.containsKey(producto.getCodProducto())) {
             System.out.println(producto.getCodProducto()+" no existe este producto");
@@ -29,38 +30,86 @@ public class Inventario {
             System.out.println(producto.getCodProducto()+" eliminado");
         }
     }
-    //Actualizar producto
+    //Actualizar producto - 0(1)
     public void actualizarStock(Productos producto) {
         inventarioProductos.put(producto.getCodProducto(), producto);
         System.out.println(producto.getCodProducto()+" se actualizado correctamente");
     }
 
-    //Consultar Producto
+    //Consultar Producto - 0(1)
     public void  buscarProducto(String codProducto) {
        if(inventarioProductos.containsKey(codProducto)) {
            Productos producto = inventarioProductos.get(codProducto);
-           System.out.println(producto.getCodProducto()+"|"+ producto.getNombreProducto()+"|"+producto.getCategoriaProducto()+"|"+producto.getPrecioProducto()+"|"+producto.getStockProducto());
+           System.out.println(producto.toString());
        }
     }
 
     //Metodos avanzados
 
-    //Mostrar inventario
+    //Mostrar inventario - 0(n)
     public String mostrarInventario() {
         if(inventarioProductos.size() > 0) {
-                StringBuilder sb = new StringBuilder();//Nueva clase que sirve para almacenar texto para imprimir
-                for (Productos i : inventarioProductos.values()) {
-                    sb.append(i.getNombreProducto())
-                            .append(" | ").append(i.getCategoriaProducto())
-                            .append(" | ").append(i.getPrecioProducto())
-                            .append(" | ").append(i.getStockProducto())
-                            .append("\n");
+            for (Productos i : inventarioProductos.values()) {
+                System.out.println(i.toString());
             }
-                return sb.toString();
+
         }else {
+            System.out.println("No hay inventario");
+        }
+
+        return null;
+    }
+    //Consultar productos por categoria - 0(n)
+    public void mostrarPorCategoria(String categoria) {
+
+        if(inventarioProductos.size() > 0) {
+
+            categoria = Categoria.valueOf(categoria.toUpperCase()).toString();//Parsear la categoria escrita a Categoria enum
+
+            for (Productos i : inventarioProductos.values()) {
+
+                Categoria catObjetivo = i.getCategoriaProducto();//Usar la variable catObjetivo para almacenar el valor de la instancia producto para poder compararlo
+
+                if (categoria.equals(catObjetivo.toString())) {
+                    System.out.println(i.toString());
+                }
+            }
+        }else {
+            System.out.println("No existe hay productos de esta categoria en stock");
+        }
+    }
+    //Precio de todo el inventario - 0(n)
+    public Double precioInventario() {
+        double precio = 0;
+
+        if (inventarioProductos.size() > 0) {
+            for (Productos i : inventarioProductos.values()) {
+                precio += i.valorStockProducto();
+            }
+            return precio;
+        } else {
             System.out.println("No hay inventario");
         }
         return null;
     }
+    //Vender producto
+    public void venderProducto(String producto,int cantidad) {
+        if(inventarioProductos == null || inventarioProductos.isEmpty()) {
+            System.out.println("No existe hay productos en stock");
+        }
 
+        if (inventarioProductos.containsKey(producto)) {
+            Productos productoCompra = inventarioProductos.get(producto);
+            if (productoCompra.getStockProducto() >= cantidad) {
+                double precioVenta = productoCompra.valorStockProducto()*cantidad;
+                System.out.println("Venta realizada: " + cantidad + " unidades de " +productoCompra.getNombreProducto()+ " por "+ (precioVenta-productoCompra.valorStockProducto()));
+                productoCompra.setStockProducto(productoCompra.getStockProducto() - cantidad);
+                System.out.println("Stock restante: "+productoCompra.getStockProducto() );
+            }else {
+                System.out.println("No suficientes productos en stock");
+            }
+        }else {
+            System.out.println("No existe este producto en stock");
+        }
+    }
 }

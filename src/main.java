@@ -8,6 +8,16 @@ public class main {
         // Inicializamos el inventario
         Inventario inventario = new Inventario("PC-Component's", new HashMap<>());
 
+        // Productos iniciales
+        inventario.agregarProducto(new Productos("P001", "Portátil Lenovo", 750.00, Categoria.PC, 10));
+        inventario.agregarProducto(new Productos("P002", "Ratón Logitech", 25.99, Categoria.PC, 30));
+        inventario.agregarProducto(new Productos("P003", "Teclado Mecánico", 55.00, Categoria.PC, 15));
+        inventario.agregarProducto(new Productos("P004", "Smartphone Samsung", 899.00, Categoria.MOVIL, 8));
+        inventario.agregarProducto(new Productos("P005", "Auriculares Sony", 120.50, Categoria.MOVIL, 20));
+        inventario.agregarProducto(new Productos("P006", "Tablet iPad", 450.00, Categoria.TABLET, 12));
+        inventario.agregarProducto(new Productos("P007", "Tablet Samsung", 399.00, Categoria.TABLET, 7));
+
+
         boolean repetir = true;
 
         while (repetir) {
@@ -17,6 +27,9 @@ public class main {
             System.out.println("3. Eliminar Producto");
             System.out.println("4. Buscar Producto");
             System.out.println("5. Mostar Inventario");
+            System.out.println("6. Búsqueda por categoria");
+            System.out.println("7. Precio total del inventario");
+            System.out.println("8. Vender producto");
             System.out.println("0. Salir");
             System.out.print("Ingrese opción: ");
 
@@ -89,6 +102,31 @@ public class main {
                 case 5:
                     System.out.println("--- Mostar Inventario ---");
                     System.out.println(inventario.mostrarInventario());
+                    break;
+
+                case 6:
+                    System.out.println("--- Mostrar por Categoría ---");
+                    System.out.print("Ingrese categoría: ");
+                    String categBuscar = sc.nextLine();
+                    inventario.mostrarPorCategoria(categBuscar);
+                    break;
+
+                case 7:
+                    System.out.println("--- Precio total del Inventario ---");
+                    Double precioTotal = inventario.precioInventario();
+                    if (precioTotal != null) {
+                        System.out.println("Valor total del inventario: " + precioTotal + " €");
+                    }
+                    break;
+
+                case 8:
+                    System.out.println("--- Vender producto ---");
+                    System.out.print("Introduce el código del producto: ");
+                    String codVender = sc.nextLine();
+                    System.out.print("Introduce la cantidad a vender: ");
+                    int cantidad = sc.nextInt();
+                    sc.nextLine();
+                    inventario.venderProducto(codVender, cantidad);
                     break;
 
                 case 0:

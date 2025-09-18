@@ -45,6 +45,8 @@ public class Productos {
         this.stockProducto = stockProducto;
     }
 
+    //Metodos
+    //Metodo para parsear el objeto a String- 0(1)
     @Override
     public String toString() {
         return "Productos{" +
@@ -54,5 +56,9 @@ public class Productos {
                 ", categoriaProducto=" + categoriaProducto +
                 ", stockProducto=" + stockProducto +
                 '}';
+    }
+    //Metodo para obtener el valor toatl de un procuto en Stock
+    public double valorStockProducto() {
+        return precioProducto * stockProducto;
     }
 }
