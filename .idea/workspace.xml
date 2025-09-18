@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1798985f-20d0-4c45-abec-8ece9fc5c5ea" name="Changes" comment="Metodos de la clase Inventario y Productos finalizados, el programa es funcional">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="1798985f-20d0-4c45-abec-8ece9fc5c5ea" name="Changes" comment="Complejidad ciclomatica de cada metodo">
+      <change beforePath="$PROJECT_DIR$/src/Inventario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inventario.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,7 +103,7 @@
       <option name="presentableId" value="Default" />
       <updated>1758115409911</updated>
       <workItem from="1758115410685" duration="12341000" />
-      <workItem from="1758177544997" duration="3144000" />
+      <workItem from="1758177544997" duration="3901000" />
     </task>
     <task id="LOCAL-00001" summary="New proyect">
       <option name="closed" value="true" />
@@ -185,7 +185,15 @@
       <option name="project" value="LOCAL" />
       <updated>1758180665642</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Complejidad ciclomatica de cada metodo">
+      <option name="closed" value="true" />
+      <created>1758180867986</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1758180867986</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -200,6 +208,7 @@
     <MESSAGE value="Metdos para añadir, eliminar, actualizar y buscar funcionales en la clase Main" />
     <MESSAGE value="Metdos para listar stock" />
     <MESSAGE value="Metodos de la clase Inventario y Productos finalizados, el programa es funcional" />
-    <option name="LAST_COMMIT_MESSAGE" value="Metodos de la clase Inventario y Productos finalizados, el programa es funcional" />
+    <MESSAGE value="Complejidad ciclomatica de cada metodo" />
+    <option name="LAST_COMMIT_MESSAGE" value="Complejidad ciclomatica de cada metodo" />
   </component>
 </project>
