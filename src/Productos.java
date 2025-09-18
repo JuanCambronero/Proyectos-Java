@@ -57,7 +57,7 @@ public class Productos {
                 ", stockProducto=" + stockProducto +
                 '}';
     }
-    //Metodo para obtener el valor toatl de un procuto en Stock
+    //Metodo para obtener el valor toatl de un procuto en Stock - 0(1)
     public double valorStockProducto() {
         return precioProducto * stockProducto;
     }

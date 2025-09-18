@@ -92,7 +92,7 @@ public class Inventario {
         }
         return null;
     }
-    //Vender producto
+    //Vender producto - 0(1)
     public void venderProducto(String producto,int cantidad) {
         if(inventarioProductos == null || inventarioProductos.isEmpty()) {
             System.out.println("No existe hay productos en stock");
@@ -100,6 +100,7 @@ public class Inventario {
 
         if (inventarioProductos.containsKey(producto)) {
             Productos productoCompra = inventarioProductos.get(producto);
+
             if (productoCompra.getStockProducto() >= cantidad) {
                 double precioVenta = productoCompra.valorStockProducto()*cantidad;
                 System.out.println("Venta realizada: " + cantidad + " unidades de " +productoCompra.getNombreProducto()+ " por "+ (precioVenta-productoCompra.valorStockProducto()));
@@ -108,6 +109,7 @@ public class Inventario {
             }else {
                 System.out.println("No suficientes productos en stock");
             }
+
         }else {
             System.out.println("No existe este producto en stock");
         }
